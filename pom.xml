@@ -12,6 +12,9 @@
 	<artifactId>microservice-demo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>microservice-demo</name>
+	<modules>
+		<module>twitter-to-kafka-service</module>
+	</modules>
 	<packaging>pom</packaging>
 	<description>microservice demo project for Spring Boot</description>
 	<url/>
@@ -31,6 +34,9 @@
 		<java.version>11</java.version>
 		<spring-boot.version>2.3.4.RELEASE</spring-boot.version>
 		<maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+
+		<twitter4j-stream.version>4.0.7</twitter4j-stream.version>
+		<lombok.version>1.18.16</lombok.version>
 	</properties>
 
 	<dependencyManagement>
@@ -52,6 +58,20 @@
 						<artifactId>junit-vintage-engine</artifactId>
 					</exclusion>
 				</exclusions>
+			</dependency>
+
+			<!--twitter stream 同步推特数据-->
+			<dependency>
+				<groupId>org.twitter4j</groupId>
+				<artifactId>twitter4j-stream</artifactId>
+				<version>${twitter4j-stream.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.projectlombok</groupId>
+				<artifactId>lombok</artifactId>
+				<version>${lombok.version}</version>
+				<scope>provided</scope>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
