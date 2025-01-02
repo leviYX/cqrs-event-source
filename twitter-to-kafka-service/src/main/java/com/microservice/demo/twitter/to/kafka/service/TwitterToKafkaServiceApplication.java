@@ -1,8 +1,8 @@
-package com.microservice.demo;
+package com.microservice.demo.twitter.to.kafka.service;
 
 
-import com.microservice.demo.config.TwitterToKafkaServiceConfigData;
-import com.microservice.demo.runner.StreamRunner;
+import com.microservice.demo.twitter.to.kafka.service.config.TwitterToKafkaServiceConfigData;
+import com.microservice.demo.twitter.to.kafka.service.runner.StreamRunner;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
@@ -13,7 +13,7 @@ import org.springframework.context.annotation.ComponentScan;
 import java.util.Arrays;
 
 @SpringBootApplication
-@ComponentScan(basePackages = "com.microservice.demo")
+@ComponentScan(basePackages = "com.microservice.demo")// 可以扫到别的module
 public class TwitterToKafkaServiceApplication implements CommandLineRunner {
 
     private static final Logger LOG = LoggerFactory.getLogger(TwitterToKafkaServiceApplication.class);

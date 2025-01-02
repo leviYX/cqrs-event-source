@@ -1,4 +1,4 @@
-package com.microservice.demo.config;
+package com.microservice.demo.twitter.to.kafka.service.config;
 
 import lombok.Data;
 import org.springframework.boot.context.properties.ConfigurationProperties;

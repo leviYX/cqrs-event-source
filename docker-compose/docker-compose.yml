@@ -1,0 +1,100 @@
+version: '3.8'
+services:
+  zookeeper:
+    image: zookeeper:latest
+    container_name: zookeeper
+    ports:
+      - "2181:2181"
+    environment:
+      ZOO_MY_ID: 1
+      # 单节点Zookeeper，不需要ZOO_SERVERS配置
+    volumes:
+      - ./zookeeper/data:/data
+      - ./zookeeper/datalog:/datalog
+      - ./zookeeper/logs:/logs
+    networks:
+      - kafka_network
+
+  kafka1:
+    image: wurstmeister/kafka:latest
+    container_name: kafka1
+    ports:
+      - "9092:9092"
+      - "9992:9992"  # JMX port
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9092
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka1:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_JMX_PORT: 9992
+      KAFKA_JMX_HOSTNAME: kafka1
+      JAVA_OPTS_JMX: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka1 -Dcom.sun.management.jmxremote.rmi.port=9992"
+    volumes:
+      - ./kafka1/data:/var/lib/kafka/data
+    networks:
+      - kafka_network
+    depends_on:
+      - zookeeper
+
+  kafka2:
+    image: wurstmeister/kafka:latest
+    container_name: kafka2
+    ports:
+      - "9093:9093"
+      - "9993:9993"
+    environment:
+      KAFKA_BROKER_ID: 2
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9093
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka2:9093
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_JMX_PORT: 9993
+      KAFKA_JMX_HOSTNAME: kafka2
+      JAVA_OPTS_JMX: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka2 -Dcom.sun.management.jmxremote.rmi.port=9993"
+
+    volumes:
+      - ./kafka2/data:/var/lib/kafka/data
+    networks:
+      - kafka_network
+    depends_on:
+      - zookeeper
+
+  kafka3:
+    image: wurstmeister/kafka:latest
+    container_name: kafka3
+    ports:
+      - "9094:9094"
+      - "9994:9994"
+    environment:
+      KAFKA_BROKER_ID: 3
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_LISTENERS: PLAINTEXT://0.0.0.0:9094
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka3:9094
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_JMX_PORT: 9994
+      KAFKA_JMX_HOSTNAME: kafka3
+      JAVA_OPTS_JMX: "-Dcom.sun.management.jmxremote -Dcom.sun.management.jmxremote.authenticate=false -Dcom.sun.management.jmxremote.ssl=false -Djava.rmi.server.hostname=kafka3 -Dcom.sun.management.jmxremote.rmi.port=9994"
+    volumes:
+      - ./kafka3/data:/var/lib/kafka/data
+    networks:
+      - kafka_network
+    depends_on:
+      - zookeeper
+#  kafka-manager:
+#    image: hlebalbau/kafka-manager
+#    ports:
+#      - "9000:9000"
+#    environment:
+#      ZK_HOSTS: zookeeper:2181
+#    depends_on:
+#      - kafka1
+#      - kafka2
+#      - kafka3
+
+networks:
+  kafka_network:
+    driver: bridge

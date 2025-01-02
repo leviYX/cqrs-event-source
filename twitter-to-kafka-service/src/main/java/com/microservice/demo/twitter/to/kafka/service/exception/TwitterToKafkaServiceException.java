@@ -1,4 +1,4 @@
-package com.microservice.demo.exception;
+package com.microservice.demo.twitter.to.kafka.service.exception;
 
 public class TwitterToKafkaServiceException extends RuntimeException {
 
