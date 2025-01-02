@@ -1,0 +1,35 @@
+2024-12-30 18:26:04 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on levideMacBook-Pro.local with PID 79266 (/Users/levi/develop/project/springcloud/event-elastic/microservice-demo/twitter-to-kafka-service/target/classes started by levi in /Users/levi/develop/project/springcloud/event-elastic/microservice-demo)
+2024-12-30 18:26:04 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2024-12-30 18:26:04 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.967 seconds (JVM running for 7.11)
+2024-12-30 18:26:04 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - app is running
+2024-12-30 18:26:04 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2024-12-30 18:28:59 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on levideMacBook-Pro.local with PID 79803 (/Users/levi/develop/project/springcloud/event-elastic/microservice-demo/twitter-to-kafka-service/target/classes started by levi in /Users/levi/develop/project/springcloud/event-elastic/microservice-demo)
+2024-12-30 18:28:59 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2024-12-30 18:29:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.946 seconds (JVM running for 7.079)
+2024-12-30 18:29:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - app is running
+2024-12-30 18:29:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2024-12-30 18:29:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - null
+2024-12-30 18:29:27 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on levideMacBook-Pro.local with PID 79893 (/Users/levi/develop/project/springcloud/event-elastic/microservice-demo/twitter-to-kafka-service/target/classes started by levi in /Users/levi/develop/project/springcloud/event-elastic/microservice-demo)
+2024-12-30 18:29:27 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2024-12-30 18:29:28 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 0.921 seconds (JVM running for 7.053)
+2024-12-30 18:29:28 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - app is running
+2024-12-30 18:29:28 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - [Java, Microservices, Spring, Kafka, Elasticsearch]
+2024-12-30 18:29:28 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - hello microservice
+2024-12-30 18:50:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication on levideMacBook-Pro.local with PID 83745 (/Users/levi/develop/project/springcloud/event-elastic/microservice-demo/twitter-to-kafka-service/target/classes started by levi in /Users/levi/develop/project/springcloud/event-elastic/microservice-demo)
+2024-12-30 18:50:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2024-12-30 18:50:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 1.045 seconds (JVM running for 7.212)
+2024-12-30 18:50:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - App starts...
+2024-12-30 18:50:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - [Java, Microservices, Kafka, Elasticsearch]
+2024-12-30 18:50:00 [main] INFO  c.m.d.TwitterToKafkaServiceApplication - Hello microservices!
+2024-12-30 18:50:00 [main] INFO  c.m.d.r.impl.MockKafkaStreamRunner - Starting mock filtering twitter streams for keywords [Java, Microservices, Kafka, Elasticsearch]
+2024-12-30 18:50:01 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text ultricies congue dolor elit Maecenas Microservices consectetuer ipsum consectetuer
+2024-12-30 18:50:11 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text adipiscing consectetuer libero sit adipiscing Lorem ipsum Elasticsearch dolor sit Fusce magna Fusce sed
+2024-12-30 18:50:21 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text congue ipsum Lorem dolor Fusce libero dolor Java dolor malesuada amet Maecenas dolor
+2024-12-30 18:50:31 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text Lorem Maecenas Fusce Microservices adipiscing elit
+2024-12-30 18:50:41 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text consectetuer adipiscing sed libero porttitor consectetuer dolor malesuada Microservices elit Fusce pulvinar adipiscing porttitor lectus malesuada
+2024-12-30 18:50:51 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text ipsum Maecenas consectetuer Fusce Microservices Maecenas sit
+2024-12-30 18:51:01 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text Fusce magna libero Java Fusce sed
+2024-12-30 18:51:11 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text lectus Maecenas lectus congue malesuada Kafka congue Lorem ultricies sit
+2024-12-30 18:51:21 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text Fusce Fusce ipsum purus dolor Lorem amet lectus Microservices posuere adipiscing Maecenas libero Maecenas posuere
+2024-12-30 18:51:31 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text dolor massa sit consectetuer ipsum ipsum sed Java sit consectetuer sit Fusce pulvinar
+2024-12-30 18:51:41 [pool-1-thread-1] INFO  c.m.d.l.TwitterKafkaStatusListener - Twitter status with text Lorem dolor sit libero malesuada sit Microservices libero consectetuer Maecenas libero ipsum
